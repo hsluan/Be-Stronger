@@ -1,6 +1,6 @@
 #include "main.h"
 #include "AppDelegate.h"
-#include "CCEGLView.h"
+#include "CCGLView.h"
 #include "GameDefine.h"
 
 USING_NS_CC;
@@ -14,9 +14,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
     UNREFERENCED_PARAMETER(lpCmdLine);
 
     // create the application instance
-    AppDelegate app;
-    CCEGLView* eglView = CCEGLView::sharedOpenGLView();
-    eglView->setViewName("HelloCpp");
-    eglView->setFrameSize(HALF_WIDTH_SCREEN*2/3, HALF_HEIGHT_SCREEN*2/3);
-    return CCApplication::sharedApplication()->run();
+	AppDelegate app;
+
+    return Application::sharedApplication()->run();
 }

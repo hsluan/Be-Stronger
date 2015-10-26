@@ -10,14 +10,14 @@
 #define IMG_BALL								"images/ball.png"
 #define IMG_BACKGROUND							"images/bgIngame.png"
 
-#define POS_BALL								ccp(HALF_WIDTH_SCREEN, 200)
+#define POS_BALL								ccp(HALF_WIDTH_SCREEN, 64)
 #define POS_BACKGROUND							ccp(HALF_WIDTH_SCREEN, HALF_HEIGHT_SCREEN)
 
 #define WIDTH_SPRITE(_x)						_x->getContentSize().width
 #define HEIGHT_SPRITE(_x)						_x->getContentSize().height
 
 #define COLOR_FONT_SCORE						ccc3( 255, 0, 0)
-
+#define DISTANCE_NEED_RANDOM					800
 #define ADDITIVE								ccBlendFunc{GL_SRC_ALPHA, GL_ONE}
 
 enum class ZOrder
@@ -34,6 +34,8 @@ enum class ZOrder
 enum enumTagGame
 {
 	TAG_JUMP_ACTION = 30,
+	TAG_FOR_RANDOM,
+	TAG_FOR_GET_SCORE,
 };
 
 #endif
