@@ -73,6 +73,10 @@ bool HelloWorld::init()
 
 	createObstacle();	
 
+	auto touchlistener = EventListenerTouchOneByOne::create();
+	touchlistener->onTouchBegan = CC_CALLBACK_2(HelloWorld::onTouchBegan, this);
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(touchlistener, this);
+
 	this->scheduleUpdate();
 
     return true;
